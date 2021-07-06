@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*ログイン関連*/
+
+.view {
+  display: none;
+}
+
+#login {
+  padding-top: 51px;
+}
+
+#login__help {
+  display: none;
+}
+
+/*calendar部分*/
+#calendar {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+    
+}
+
+/*calendar両サイドのpadding*/

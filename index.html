@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>ひとこと日記帳</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- FullcalendarのCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- ログイン画面 -->
+    <section id="login" class="view">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-10 col-md-8 col-lg-6">
+            <form id="login-form">
+              <div class="form-group login__email">
+                <label for="login-email" class="col-form-label">
+                  メールアドレス
+                </label>
+                <div>
+                  <input id="login-email" type="email" class"from-control" requied>
+                </div>
+              </div>
+              <div class="form-group login__password">
+                <label for="login-password" class="col-form-label">
+                  パスワード
+                </label>
+                <div>
+                  <input id="login-password" type="password" class="form-control" required>
+                </div>
+              </div>
+              <div id="login__help" class="alert-danger"></div>
+              <div class="form-group login__submit"></div>
+                <div>
+                  <button id="login__submit-button" type="submit" class="btn btn-success">
+                    ログイン
+                  </button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div id="main">
+    <!-- calendar -->
+    <div id='calendar' class="view"></div>
+    
+    <button class="btn btn-primary logout-button">
+      ログアウト
+    </button>
+    
+    <!-- モーダル部分 -->
+    </div>
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBTcTyKJFtyx-uH_IQ6OyUiCuC5BPSX-wA",
+    authDomain: "original-service-49e84.firebaseapp.com",
+    databaseURL: "https://original-service-49e84-default-rtdb.firebaseio.com",
+    projectId: "original-service-49e84",
+    storageBucket: "original-service-49e84.appspot.com",
+    messagingSenderId: "178736622291",
+    appId: "1:178736622291:web:fb405ba3c2e5620f0a4226"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>  
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="main.js"></script>
+  </body>
+</html>
+
